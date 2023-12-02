@@ -1,0 +1,17 @@
+<!-- {% for movie_obj in movies %}
+<h1>title:{{movie_obj.title |  upper}}</h1>
+<p>summary:{{movie_obj.summary| default:'no data available'}}</p>
+<h2>year:{{movie_obj.year}}</h2>
+{% if movie_obj.success%}
+<p>movie was a success at that time</p>
+{% else %}
+<p>movie was a failure</p>
+{% endif %}
+{% endfor %} -->
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit">
+</form>
+
